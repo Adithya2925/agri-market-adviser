@@ -1,0 +1,7 @@
+{
+  "name": "Agri-Market Advisor",
+  "description": "An AI-powered chatbot designed for farmers and sellers to discover high-demand markets and profitable export opportunities for their value-added agricultural products. Features real-time market analysis via Gemini and multi-language speech-to-text input.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

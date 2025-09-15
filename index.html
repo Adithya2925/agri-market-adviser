@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agri-Market Advisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --background-light: #fcfcfc;
+        --background-dark: #111827; /* gray-900 */
+        --text-light: #1f2937; /* gray-800 */
+        --text-dark: #e5e7eb; /* gray-200 */
+        --scrollbar-thumb-light: rgba(156, 163, 175, 0.5); /* gray-400 */
+        --scrollbar-thumb-hover-light: rgba(156, 163, 175, 0.8);
+        --scrollbar-thumb-dark: rgba(75, 85, 99, 0.5); /* gray-600 */
+        --scrollbar-thumb-hover-dark: rgba(75, 85, 99, 0.8);
+      }
+      html.dark {
+        color-scheme: dark;
+      }
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: var(--background-light);
+        color: var(--text-light);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      html.dark body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+      }
+      /* Custom Scrollbar for Webkit browsers */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      body ::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-light);
+        border-radius: 5px;
+        border: 2px solid var(--background-light);
+        background-clip: content-box;
+      }
+      body ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scrollbar-thumb-hover-light);
+      }
+      html.dark body ::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-dark);
+        border-color: var(--background-dark);
+      }
+       html.dark body ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scrollbar-thumb-hover-dark);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+    "recharts": "https://aistudiocdn.com/recharts@^2.12.7"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
